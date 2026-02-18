@@ -21,6 +21,11 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="emacs"
+    opacity 1.0
+    open-maximized true
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#

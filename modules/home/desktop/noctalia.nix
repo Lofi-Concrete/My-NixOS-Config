@@ -45,6 +45,10 @@
           # 右侧
           right = [
             {
+              # 系统托盘
+              id = "Tray";
+            }
+            {
               alwaysShowPercentage = false;    # 仅必要时显示电池百分比
               id = "Battery";
               warningThreshold = 30;           # 电量低于30警告
@@ -55,10 +59,6 @@
               id = "Clock";
               useMonospacedFont = true;
               usePrimaryColor = true;
-            }
-            {
-              # 系统托盘
-              id = "Tray";
             }
           ];
         };
