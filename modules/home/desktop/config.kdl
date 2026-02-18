@@ -1,0 +1,103 @@
+// 引用模块
+include "./window-rules.kdl"
+include "./binds.kdl"
+
+// 移除标题栏
+prefer-no-csd
+
+// 开机自启
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "sh" "-c" "pkill fcitx5; fcitx5 -d"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+
+input {
+    focus-follows-mouse
+    keyboard {
+        xkb {
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+    }
+
+    trackpoint {
+    }
+
+}
+
+/-output "eDP-1" {
+    mode "1920x1080@120.030"
+    scale 2
+
+    transform "normal"
+
+    position x=1280 y=0
+}
+
+layout {
+    gaps 6
+
+    center-focused-column "never"
+    always-center-single-column
+
+    background-color "transparent"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+
+    }
+
+
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        width 1
+
+        active-color "#7fc8ff"
+
+        inactive-color "#505050"
+
+    }
+
+    border {
+        off
+
+        // width 4
+        // active-color "#ffc87f"
+        // inactive-color "#505050"
+
+        // urgent-color "#9b0000"
+
+    }
+
+    shadow {
+        softness 30
+
+        spread 5
+
+        offset x=0 y=5
+
+        color "#0007"
+    }
+
+    struts {
+    }
+}
+
+
+hotkey-overlay {
+    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
+    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+}
