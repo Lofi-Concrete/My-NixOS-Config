@@ -20,17 +20,18 @@
     splayer
 
     # ----- 社交 -----
+    telegram-desktop
     qq
 
     # ----- 邮件 -----
     thunderbird
     aerc
 
-    # ----- 代理 -----
-    clash-verge-rev
-
     # ----- Office -----
     libreoffice-qt-fresh
+
+    # ----- 代理 -----
+    clash-verge-rev
 
     # ----- PDF -----
     zathura

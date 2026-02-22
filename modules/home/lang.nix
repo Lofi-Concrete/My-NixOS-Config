@@ -19,7 +19,10 @@
     # ----- Rust -----
     rustc                       # Rust编译器
     cargo                       # Rust包管理器
-    rust-analyzer                # Rust语言服务器
+    rust-analyzer               # Rust语言服务器
     rustfmt                     # Rust格式化工具
+
+    # ----- Elisp -----
+    emacs-lsp-booster           # 语法分析服务器
   ];
 }

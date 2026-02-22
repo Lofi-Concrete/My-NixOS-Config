@@ -27,6 +27,17 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="clash-verge"
+    open-floating true
+}
+
+window-rule {
+    match app-id="QQ"
+    match title="^QQ$"
+    open-floating true
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#

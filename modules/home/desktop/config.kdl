@@ -8,8 +8,9 @@ prefer-no-csd
 // 开机自启
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "sh" "-c" "pkill fcitx5; fcitx5 -d"
+spawn-at-startup "fcitx5"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+spawn-at-startup "clash-verge"
 
 input {
     focus-follows-mouse
@@ -39,6 +40,11 @@ input {
     transform "normal"
 
     position x=1280 y=0
+}
+
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
 }
 
 layout {

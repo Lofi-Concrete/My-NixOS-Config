@@ -26,11 +26,15 @@
     dbus.enable = true; # 启用D-Bus
     gvfs.enable = true; # 启动GVFS 让文件管理器可以挂载网络共享、MTP手机连接等
     upower.enable = true; # 监控电池状态和控制待机
+    gnome.gnome-keyring.enable = true;
   };
+
+  security.pam.services.login.enableGnomeKeyring = true;
 
   programs = {
     niri.enable = true; # niri
     dconf.enable = true; # 开启dconf GNOME等系列应用用其储存用户偏好
+    nix-ld.enable = true;
   };
 
   # 开启蓝牙

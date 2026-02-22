@@ -4,7 +4,7 @@
     enable = true;
 
     # 安装插件
-    extensions = [ "nix" "kdl" "zig" "rust" "cpp" "toml" "yaml" "make" "sql" "git-firehose" ];
+    extensions = [ "nix" "kdl" "zig" "rust" "cpp" "toml" "yaml" "make" "sql" "git-firehose" "elisp" ];
 
     userSettings = {
       vim_mode = true;
@@ -68,6 +68,10 @@
               arguments = [ "--emit=stdout" ];
             };
           };
+        };
+
+        "Elisp" = {
+          language_servers = [ "emacs-lsp-booster" ];
         };
       };
     };

@@ -10,11 +10,32 @@
     enable = true;
 
     settings = {
-      # 顶栏设置
+      # 设置头像
+      general = {
+        avatarImage = "/home/mourne/Pictures/wallpaper/avatar.jpg";
+      };
+
+      # 使用壁纸配色
+      colorSchemes = {
+        useWallpaperColors = true;
+      };
+
+      # 壁纸与壁纸预览
+      wallpaper = {
+        enabled = true;
+        overviewEnabled = true;
+        directory = "/home/mourne/Pictures/wallpaper";
+        overviewBlur = 0.4;
+        overviewTint = 0.6;
+      };
+
       bar = {
         density = "compact";                  # 紧凑模式
         position = "top";                     # 固定在上方
-        showCapsule = false;                  # 隐藏胶囊装外饰
+        useSeparateOpacity = true;
+        backgroundOpacity = 0.0;
+        showOutline = true;
+        showCapsule = true;
 
         # 状态栏配置
         widgets = {
