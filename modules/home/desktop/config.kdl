@@ -1,3 +1,8 @@
+// 工作区
+workspace "code"
+workspace "reading"
+workspace "social"
+
 // 引用模块
 include "./window-rules.kdl"
 include "./binds.kdl"
@@ -9,8 +14,16 @@ prefer-no-csd
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "fcitx5"
-spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri" "NIRI_SOCKET"
+spawn-at-startup "systemctl --user restart swayidle.service"
 spawn-at-startup "clash-verge"
+
+// 合盖锁屏
+switch-events {
+    lid-close {
+        spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
+    }
+}
 
 input {
     focus-follows-mouse
@@ -64,7 +77,7 @@ layout {
 
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 1
+        width 2.5
 
         active-color "#7fc8ff"
 

@@ -17,6 +17,8 @@
       nerd-fonts.caskaydia-cove
       nerd-fonts.symbols-only
       sarasa-gothic
+      ipafont
+      udev-gothic
     ];
 
     # 字体默认设置
@@ -26,12 +28,13 @@
         emoji = [ "Noto Color Emoji" ];
         monospace = [
           "Maple Mono NF"
-          "JetBrainsMono Nerd Font"
+          "UDEV Gothic NFL"
           "Sarasa Mono SC"
         ];
         sansSerif = [
           "LXGW WenKai"
-          "Noto Serif CJK SC"
+          "IPAGothic"
+          "Noto Sans CJK SC"
         ];
       };
     };

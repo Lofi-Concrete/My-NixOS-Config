@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   programs.ghostty = {
     enable = true;
 
     settings = {
+
+      gtk-single-instance = true;
 
       # 字体
       font-family = "Maple Mono NF";
@@ -13,7 +15,6 @@
 
       # 主题
       theme = "TokyoNight Moon";
-      background-blur-radius = 20;
 
       # 窗口
       window-padding-x = 12;

@@ -5,9 +5,10 @@
 {
   environment.systemPackages = with pkgs; [
     git
-    fastfetch                                 # 飞起来
     wget                                      # 命令行下载工具
     xwayland-satellite                        # 为wayland提供x1land
     xwayland                                  # wayland运行x11
+    quickshell
+    libnotify                                 # 用于发送桌面通知的客户端库
   ];
 }

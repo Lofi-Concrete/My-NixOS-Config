@@ -29,6 +29,14 @@
     gnome.gnome-keyring.enable = true;
   };
 
+  # 合盖
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+  };
+
+  # 代理
+  boot.kernelModules = [ "tun" ];
+
   security.pam.services.login.enableGnomeKeyring = true;
 
   programs = {

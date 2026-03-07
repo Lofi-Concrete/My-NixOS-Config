@@ -1,11 +1,20 @@
 # 这是tlp管理 使电源管理更合理
 
-{ config, pkgs, ... }:
+{ ... }:
 {
+
+  services.thermald.enable = true;
+
   services.tlp = {
     enable = true;
 
     settings = {
+      # CPU调频
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 60;
+
+      # 音频省电
+      SOUND_QUERY_CHIPS = "on";
 
       # 调度策略
       CPU_SCALING_GOVERNOR_ON_AC = "performance";

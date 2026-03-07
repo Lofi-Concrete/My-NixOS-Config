@@ -5,6 +5,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Return { spawn "footclient"; }
 
     Mod+E { spawn "thunar"; }
 

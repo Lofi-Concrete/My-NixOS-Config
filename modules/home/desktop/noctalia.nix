@@ -13,6 +13,7 @@
       # 设置头像
       general = {
         avatarImage = "/home/mourne/Pictures/wallpaper/avatar.jpg";
+        compactLockScreen = false;
       };
 
       # 使用壁纸配色
@@ -33,7 +34,7 @@
         density = "compact";                  # 紧凑模式
         position = "top";                     # 固定在上方
         useSeparateOpacity = true;
-        backgroundOpacity = 0.0;
+        backgroundOpacity = 0.85;
         showOutline = true;
         showCapsule = true;
 
@@ -68,6 +69,13 @@
             {
               # 系统托盘
               id = "Tray";
+            }
+            {
+              # 亮度
+              id = "Brightness";
+            }
+            {
+              id = "Volume";
             }
             {
               alwaysShowPercentage = false;    # 仅必要时显示电池百分比

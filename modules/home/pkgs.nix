@@ -5,10 +5,6 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.nixvim.packages.x86_64-linux.default
 
-    # ----- 终端实用工具 -----
-    btop
-    yazi
-
     # ----- 文件管理和缩略图支持 -----
     thunar
     tumbler
@@ -33,8 +29,31 @@
     # ----- 代理 -----
     clash-verge-rev
 
-    # ----- PDF -----
-    zathura
+    # ----- 文档阅读 -----
     kdePackages.okular
+    sioyek
+    foliate
+
+    # ----- 笔记 -----
+    logseq
+
+    # ----- TUI -----
+    ani-cli                    # 追番
+    ncspot                     # Spotify
+    newsraft                   # RSS阅读器
+    clashtui                   # 代理
+    aerc                       # 邮件
+    calcurse                   # 日历
+    manga-tui                  # 电子漫画阅读器
+    mapscii                    # 地图
+    notcurses                  # 终端UI库
+    tuir                       # Reddit
+    tenki                      # 天气
+    cbonsai                    # 树
+    chawan                     # 浏览器
+    browsh                     # 浏览器
+    yazi                       # 文件管理器
+    btop                       # 性能
+    lazygit                    # Git
   ];
 }
